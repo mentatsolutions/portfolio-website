@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wendell White - Resume</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2a2a2a;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .job, .education-item {
+            margin-bottom: 20px;
+        }
+        .job-title, .degree {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .company, .institution {
+            font-style: italic;
+        }
+        .date {
+            color: #666;
+            font-size: 0.9em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .print-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .print-button button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .print-button button:hover {
+            background-color: #2980b9;
+        }
+        @media print {
+            .print-button {
+                display: none;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-button">
+        <button onclick="window.print()">Print or Save as PDF</button>
+    </div>
+
+    <h1>Wendell White</h1>
+    <div class="contact-info">
+        <p>Denver, Colorado | (123) 456-7890 | wendell@mentatsolutions.com</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Summary</h2>
+        <p>Data Analyst and Bitcoin Evangelist with expertise in blockchain analytics and algorithmic trading. Background in Petroleum Engineering with experience in complex drilling projects worldwide. Combines technical expertise with data-driven analysis to deliver valuable insights and solutions.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="job">
+            <div class="job-title">Senior Data Analyst</div>
+            <div class="company">Blockchain Analytics Inc.</div>
+            <div class="date">January 2022 - Present</div>
+            <ul>
+                <li>Develop and maintain data pipelines for cryptocurrency market analysis</li>
+                <li>Create interactive dashboards for visualizing blockchain data and market trends</li>
+                <li>Implement machine learning models to predict market movements</li>
+                <li>Collaborate with development teams to integrate analytics solutions</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <div class="job-title">Blockchain Consultant</div>
+            <div class="company">Crypto Solutions LLC</div>
+            <div class="date">March 2020 - December 2021</div>
+            <ul>
+                <li>Advised clients on blockchain implementation strategies</li>
+                <li>Developed custom analytics tools for cryptocurrency portfolio management</li>
+                <li>Conducted workshops on blockchain technology and cryptocurrency investing</li>
+                <li>Analyzed on-chain metrics to identify market trends and opportunities</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <div class="job-title">Petroleum Engineer</div>
+            <div class="company">Global Energy Corporation</div>
+            <div class="date">June 2015 - February 2020</div>
+            <ul>
+                <li>Managed drilling operations for offshore oil platforms</li>
+                <li>Optimized production processes using data analysis techniques</li>
+                <li>Implemented safety protocols that reduced incidents by 35%</li>
+                <li>Collaborated with international teams on complex engineering projects</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-item">
+            <div class="degree">Master of Science in Data Science</div>
+            <div class="institution">University of Colorado, Denver</div>
+            <div class="date">2018 - 2020</div>
+        </div>
+        
+        <div class="education-item">
+            <div class="degree">Bachelor of Science in Petroleum Engineering</div>
+            <div class="institution">Colorado School of Mines</div>
+            <div class="date">2011 - 2015</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certifications</h2>
+        <ul>
+            <li>JavaScript Programming for Blockchain Developers (Blockchain Academy, 2021)</li>
+            <li>Bitcoin Programming 101 (Blockchain Academy, 2021)</li>
+            <li>Bitcoin and Blockchain 101 (Blockchain Academy, 2020)</li>
+            <li>Advanced Data Analysis with R (DataCamp, 2019)</li>
+            <li>Machine Learning Fundamentals (Coursera, 2019)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Blockchain Analytics</span>
+            <span class="skill">Algorithmic Trading</span>
+            <span class="skill">Python</span>
+            <span class="skill">R</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">React.js</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">SQL</span>
+            <span class="skill">TidyVerse</span>
+            <span class="skill">Data Visualization</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Smart Contracts</span>
+            <span class="skill">Technical Writing</span>
+            <span class="skill">Public Speaking</span>
+        </div>
+    </div>
+
+    <script>
+        // Print button functionality is handled by the onclick attribute
+    </script>
+</body>
+</html>

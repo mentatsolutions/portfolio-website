@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- Using Unicode symbols instead of Font Awesome -->
+    <style>
+        /* System font stack instead of Google Fonts */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        /* Icon styles */
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            text-align: center;
+        }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Wendell White</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <span class="icon">🌙</span>
+                    <span class="icon">☀️</span>
+                </button>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Professional Portfolio</h2>
+                <p>Data Analyst & Bitcoin Evangelist</p>
+                <a href="#portfolio" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/profile-pic.jpg" alt="Profile Picture" onerror="this.src='https://via.placeholder.com/300x300?text=Profile+Photo'">
+                </div>
+                <div class="about-text">
+                    <h3>Hello, I'm <span class="highlight">Wendell White</span></h3>
+                    <p>I am a Data Analyst and Bitcoin Evangelist with expertise in blockchain analytics and algorithmic trading. With a background in Petroleum Engineering, I've worked on complex drilling projects worldwide before discovering the fascinating world of Bitcoin and cryptocurrency.</p>
+                    <p>My approach combines technical expertise with data-driven analysis to deliver valuable insights and solutions. I am constantly learning and adapting to new technologies in the blockchain and analytics space.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="icon">✉️</span>
+                            <span>wendell@mentatsolutions.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon">📞</span>
+                            <span>+1 (123) 456-7890</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon">📍</span>
+                            <span>Denver, Colorado</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/" target="_blank"><span class="icon">in</span></a>
+                        <a href="documents/wendell-white-resume.html" download title="Download Resume"><span class="icon">📄</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Certifications</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="carousel-container certifications-carousel">
+                <div class="carousel-wrapper">
+                    <!-- Certification 1 -->
+                    <div class="carousel-slide cert-slide active">
+                        <div class="certification-card">
+                            <div class="certification-logo">
+                                <img src="images/certification-logos/cert1.png" alt="Certification 1" onerror="this.src='https://via.placeholder.com/150x150?text=Certification'">
+                            </div>
+                            <div class="certification-details">
+                                <h3>JavaScript Programming for Blockchain Developers</h3>
+                                <p>Blockchain Academy</p>
+                                <p class="certification-date">Issued: March 2021</p>
+                                <p>Advanced JavaScript programming techniques for blockchain development, including smart contracts and decentralized applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certification 2 -->
+                    <div class="carousel-slide cert-slide">
+                        <div class="certification-card">
+                            <div class="certification-logo">
+                                <img src="images/certification-logos/cert2.png" alt="Certification 2" onerror="this.src='https://via.placeholder.com/150x150?text=Certification'">
+                            </div>
+                            <div class="certification-details">
+                                <h3>Bitcoin Programming 101</h3>
+                                <p>Blockchain Academy</p>
+                                <p class="certification-date">Issued: February 2021</p>
+                                <p>Fundamentals of Bitcoin programming, including transaction scripting, wallet development, and blockchain interaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certification 3 -->
+                    <div class="carousel-slide cert-slide">
+                        <div class="certification-card">
+                            <div class="certification-logo">
+                                <img src="images/certification-logos/cert3.png" alt="Certification 3" onerror="this.src='https://via.placeholder.com/150x150?text=Certification'">
+                            </div>
+                            <div class="certification-details">
+                                <h3>Bitcoin and Blockchain 101</h3>
+                                <p>Blockchain Academy</p>
+                                <p class="certification-date">Issued: November 2020</p>
+                                <p>Introduction to Bitcoin and blockchain technology, covering consensus mechanisms, cryptography, and decentralized networks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="carousel-prev cert-prev">❮</button>
+                    <div class="carousel-dots cert-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                    </div>
+                    <button class="carousel-next cert-next">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="carousel-container portfolio-carousel">
+                <div class="carousel-wrapper">
+                    <!-- Project 1 -->
+                    <div class="carousel-slide project-slide active">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project-images/project1.jpg" alt="Project 1" onerror="this.src='https://via.placeholder.com/600x400?text=Project+Image'">
+                            </div>
+                            <div class="project-details">
+                                <h3>Bitcoin Market Analysis Dashboard</h3>
+                                <p>A comprehensive dashboard for analyzing Bitcoin market trends, on-chain metrics, and trading signals. Combines multiple data sources to provide actionable insights for cryptocurrency investors.</p>
+                                <div class="project-tech">
+                                    <span>R</span>
+                                    <span>JavaScript</span>
+                                    <span>React.js</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm">View Project</a>
+                                    <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="carousel-slide project-slide">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project-images/project2.jpg" alt="Project 2" onerror="this.src='https://via.placeholder.com/600x400?text=Project+Image'">
+                            </div>
+                            <div class="project-details">
+                                <h3>Algorithmic Trading System</h3>
+                                <p>An automated trading system for cryptocurrency markets that implements various technical analysis strategies and risk management techniques to optimize trading performance.</p>
+                                <div class="project-tech">
+                                    <span>Node.js</span>
+                                    <span>JavaScript</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm">View Project</a>
+                                    <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="carousel-slide project-slide">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/project-images/project3.jpg" alt="Project 3" onerror="this.src='https://via.placeholder.com/600x400?text=Project+Image'">
+                            </div>
+                            <div class="project-details">
+                                <h3>Blockchain Data Analytics Tool</h3>
+                                <p>A specialized tool for analyzing blockchain data, tracking transaction patterns, and identifying network trends. Provides valuable insights for researchers and investors in the cryptocurrency space.</p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>R</span>
+                                    <span>TidyVerse</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm">View Project</a>
+                                    <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="carousel-prev project-prev">❮</button>
+                    <div class="carousel-dots project-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                    </div>
+                    <button class="carousel-next project-next">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-block">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">₿</div>
+                            <h3>Bitcoin</h3>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">R</div>
+                            <h3>R</h3>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">JS</div>
+                            <h3>JavaScript</h3>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">N</div>
+                            <h3>Node.js</h3>
+                            <span class="skill-percentage">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">⚛️</div>
+                            <h3>React.js</h3>
+                            <span class="skill-percentage">55%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 55%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">🐍</div>
+                            <h3>Python</h3>
+                            <span class="skill-percentage">20%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">π</div>
+                            <h3>Raspberry Pi</h3>
+                            <span class="skill-percentage">15%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">M</div>
+                            <h3>Markdown</h3>
+                            <span class="skill-percentage">15%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <div class="skill-icon">G</div>
+                            <h3>GitHub</h3>
+                            <span class="skill-percentage">10%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interests-section">
+                    <h3>Interests & Expertise</h3>
+                    <ul class="interests-list">
+                        <li>Bitcoin Technology</li>
+                        <li>Algorithmic Trading</li>
+                        <li>Blockchain Analytics</li>
+                        <li>RStudio, RShiny, TidyVerse</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Wendell White</h3>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wendell White. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>

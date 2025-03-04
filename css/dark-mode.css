@@ -1,0 +1,94 @@
+/* 
+ * Dark Mode Stylesheet for Portfolio Website
+ * Author: Wendell White
+ * Version: 1.0
+ */
+
+/* Dark Mode Variables */
+.dark-mode {
+    /* Main Colors - Adjusted for dark mode */
+    --primary-color: #00b3b3; /* Brighter teal for dark mode */
+    --primary-light: #66e0e0;
+    --primary-dark: #008080;
+    
+    /* Neutral Colors - Inverted for dark mode */
+    --white: #1a1a1a; /* Dark background */
+    --light-gray: #2a2a2a;
+    --medium-gray: #444444;
+    --dark-gray: #e0e0e0;
+    --black: #f8f8f8;
+    
+    /* Text Colors - Inverted for dark mode */
+    --text-primary: #f0f0f0;
+    --text-secondary: #cccccc;
+    --text-light: #1a1a1a;
+    
+    /* Other */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode header {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .fa-moon {
+    display: none;
+}
+
+.dark-mode .fa-sun {
+    display: inline-block;
+    color: #ffcc00;
+}
+
+.dark-mode .mobile-menu-btn span {
+    background-color: var(--text-primary);
+}
+
+.dark-mode .certification-card,
+.dark-mode .project-card {
+    background-color: #222222;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .certification-logo {
+    background-color: #2a2a2a;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+    background-color: #2a2a2a;
+    border-color: #444444;
+    color: var(--text-primary);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 179, 179, 0.3);
+}
+
+.dark-mode footer {
+    background-color: #111111;
+}
+
+.dark-mode .btn-outline {
+    border-color: var(--primary-color);
+}
+
+.dark-mode .project-tech span {
+    background-color: rgba(0, 179, 179, 0.2);
+    color: var(--primary-light);
+}
+
+/* Transition for smooth theme switching */
+body,
+header,
+.certification-card,
+.project-card,
+.form-group input,
+.form-group textarea,
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

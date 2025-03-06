@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Client-side form validation
         contactForm.addEventListener('submit', function(event) {
             // Only validate if we're not using FormSubmit (for testing purposes)
-            if (contactForm.getAttribute('action') === '#') {
+            if (contactForm.getAttribute('action') === '"https://formsubmit.co/mentatsolutionsllc@gmail.com" method="POST"') {
+                <input type="email" name="email"></input>
                 event.preventDefault();
                 
                 let isValid = true;

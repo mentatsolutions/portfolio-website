@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        // Form validation
+        // Client-side form validation
         contactForm.addEventListener('submit', function(event) {
-            // Only validate if not using Formspree (when form action is "#")
+            // Only validate if we're not using FormSubmit (for testing purposes)
             if (contactForm.getAttribute('action') === '#') {
                 event.preventDefault();
                 
@@ -74,16 +74,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    }
-    
-    // Helper function to check if Formspree is properly configured
-    function isFormspreeConfigured() {
-        const formAction = contactForm.getAttribute('action');
-        return formAction && formAction.includes('formspree.io') && !formAction.includes('YOUR_FORM_ID');
-    }
-    
-    // Show warning if Formspree is not configured
-    if (contactForm && !isFormspreeConfigured()) {
-        console.warn('Formspree is not properly configured. Please replace YOUR_FORM_ID with your actual Formspree form ID.');
+        
+        // Add loading indicator when form is submitted
+        contactForm.addEventListener('submit', function() {
+            // Only add loading indicator if we're using FormSubmit
+            if (contactForm.getAttribute('action').includes('formsubmit.co')) {
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.innerHTML = 'Sending... <span class="loading-spinner"></span>';
+                submitButton.disabled = true;
+                
+                // Add a loading spinner style if not already in the document
+                if (!document.getElementById('loading-spinner-style')) {
+                    const style = document.createElement('style');
+                    style.id = 'loading-spinner-style';
+                    style.textContent = `
+                        .loading-spinner {
+                            display: inline-block;
+                            width: 1em;
+                            height: 1em;
+                            border: 2px solid rgba(255,255,255,0.3);
+                            border-radius: 50%;
+                            border-top-color: white;
+                            animation: spin 1s ease-in-out infinite;
+                            margin-left: 8px;
+                            vertical-align: middle;
+                        }
+                        @keyframes spin {
+                            to { transform: rotate(360deg); }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+        });
     }
 });

@@ -346,7 +346,7 @@
                 </div>
                 
                 <div class="contact-form-container">
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/mentatsolutionsllc@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -359,7 +359,7 @@
                         
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="_subject" placeholder="Subject" required>
                         </div>
                         
                         <div class="form-group">
@@ -367,9 +367,10 @@
                             <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         
-                        <!-- Hidden fields for additional information -->
-                        <input type="hidden" name="_subject" value="New message from your portfolio website">
+                        <!-- FormSubmit configuration fields -->
                         <input type="hidden" name="_next" value="https://mentatsolutions.github.io/portfolio-website/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
                         
                         <button type="submit" class="btn">Send Message</button>
                     </form>

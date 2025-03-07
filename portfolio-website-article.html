@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Modern Portfolio Website with Zero Dependencies</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #0e7c7b;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0e7c7b;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #0e7c7b;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        ol, ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Building a Modern Portfolio Website with Zero Dependencies: A Technical Deep Dive</h1>
+
+    <h2>Introduction</h2>
+    <p>In today's web development landscape, it's common to rely on numerous libraries and frameworks to build even simple websites. However, there's something elegant about crafting a website using only vanilla HTML, CSS, and JavaScript. This article explores a portfolio website built with zero external dependencies, demonstrating how modern features can be implemented with pure web technologies.</p>
+
+    <h2>The Portfolio Website: An Overview</h2>
+    <p>This portfolio website showcases the professional background, skills, certifications, and projects of Wendell White, a Generative AI Analyst and Blockchain/Crypto Enthusiast. The site features a clean, responsive design with a teal color scheme and includes several key sections:</p>
+    <ul>
+        <li>A hero section with a brief introduction</li>
+        <li>An about section with personal and contact information</li>
+        <li>A certifications carousel showcasing professional credentials</li>
+        <li>A portfolio projects carousel highlighting key work</li>
+        <li>A contact section for visitor inquiries</li>
+    </ul>
+    <p>What makes this website particularly interesting is that it was created using Cline, an autonomous coding agent for VS Code, demonstrating the potential of AI-assisted development.</p>
+
+    <h2>Technical Architecture</h2>
+
+    <h3>HTML Structure</h3>
+    <p>The website follows a semantic HTML structure with clearly defined sections. The main page (<code>index.html</code>) contains all primary content sections, while separate pages exist for the resume (<code>wendell-white-resume.html</code>) and form submission confirmation (<code>thank-you.html</code>).</p>
+    <p>The HTML is clean and well-organized, using appropriate semantic elements like <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> to improve accessibility and SEO.</p>
+
+    <h3>CSS Implementation</h3>
+    <p>The styling is split into logical files:</p>
+    <ul>
+        <li><code>style.css</code> contains the main styling rules</li>
+        <li><code>dark-mode.css</code> handles dark mode-specific styles</li>
+    </ul>
+    <p>The CSS implementation uses modern techniques including:</p>
+    <ol>
+        <li><strong>CSS Variables</strong>: Custom properties are defined in the <code>:root</code> selector for consistent theming:
+            <pre><code>:root {
+    --primary-color: #0e7c7b;
+    --primary-dark: #085e5d;
+    /* other variables */
+}</code></pre>
+        </li>
+        <li><strong>Flexbox and Grid</strong>: Used for responsive layouts without relying on frameworks like Bootstrap.</li>
+        <li><strong>Mobile-First Approach</strong>: The design adapts seamlessly to different screen sizes through media queries.</li>
+        <li><strong>Smooth Transitions</strong>: CSS transitions provide subtle animations for interactive elements:
+            <pre><code>.btn {
+    transition: var(--transition);
+}</code></pre>
+        </li>
+    </ol>
+
+    <h3>JavaScript Functionality</h3>
+    <p>The JavaScript is modularized into separate files for different functionalities:</p>
+    <ol>
+        <li><strong>main.js</strong>: Handles core functionality including:
+            <ul>
+                <li>Mobile menu toggle</li>
+                <li>Smooth scrolling for navigation</li>
+                <li>Carousel implementation for certifications and projects</li>
+                <li>Form validation</li>
+            </ul>
+        </li>
+        <li><strong>dark-mode.js</strong>: Manages the theme switching functionality:
+            <ul>
+                <li>Toggles between light and dark modes</li>
+                <li>Saves user preferences in localStorage</li>
+                <li>Respects system color scheme preferences</li>
+                <li>Provides a subtle animation during theme changes</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Notable Features</h2>
+
+    <h3>1. Custom Carousel Implementation</h3>
+    <p>Instead of using a library like Slick or Swiper, the website implements custom carousels for both certifications and portfolio projects. The implementation includes:</p>
+    <ul>
+        <li>Previous/next navigation buttons</li>
+        <li>Dot indicators for direct slide access</li>
+        <li>Fade animations between slides</li>
+        <li>Responsive design that works across devices</li>
+    </ul>
+    <p>The carousel functionality is abstracted into reusable functions that can be applied to different content sections.</p>
+
+    <h3>2. Dark Mode Toggle</h3>
+    <p>The dark mode implementation is particularly well-executed:</p>
+    <ul>
+        <li>It respects the user's system preferences by default</li>
+        <li>It saves the user's explicit choice in localStorage</li>
+        <li>It provides visual feedback through icon changes</li>
+        <li>It includes a subtle animation during theme transitions</li>
+    </ul>
+    <p>The CSS for dark mode uses a separate stylesheet with inverted color variables:</p>
+    <pre><code>.dark-mode {
+    --primary-color: #00b3b3; /* Brighter teal for dark mode */
+    --white: #1a1a1a; /* Dark background */
+    /* other inverted colors */
+}</code></pre>
+
+    <h3>3. Performance Optimization</h3>
+    <p>Several techniques are employed to optimize performance:</p>
+    <ul>
+        <li><strong>System Font Stack</strong>: Instead of loading Google Fonts, the website uses the system font stack:
+            <pre><code>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</code></pre>
+        </li>
+        <li><strong>Unicode Symbols</strong>: Rather than loading Font Awesome or other icon libraries, the site uses Unicode symbols for icons.</li>
+        <li><strong>No External Dependencies</strong>: By avoiding jQuery, Bootstrap, and other common libraries, the website loads quickly and efficiently.</li>
+    </ul>
+
+    <h3>4. Responsive Design</h3>
+    <p>The website is fully responsive, adapting to different screen sizes through:</p>
+    <ul>
+        <li>Flexible layouts using flexbox and CSS grid</li>
+        <li>Media queries for specific breakpoints</li>
+        <li>A mobile menu that appears on smaller screens</li>
+        <li>Images that scale appropriately</li>
+    </ul>
+
+    <h2>Lessons and Takeaways</h2>
+    <p>This portfolio website demonstrates several important principles:</p>
+    <ol>
+        <li><strong>Simplicity is Powerful</strong>: You don't always need complex frameworks to build modern, interactive websites.</li>
+        <li><strong>Performance Matters</strong>: By avoiding unnecessary dependencies, the website loads quickly and runs smoothly.</li>
+        <li><strong>Progressive Enhancement</strong>: Core content is accessible even without JavaScript, with enhanced functionality added for modern browsers.</li>
+        <li><strong>Modular Organization</strong>: Separating code into logical files makes maintenance easier.</li>
+        <li><strong>User Experience Focus</strong>: Features like dark mode, smooth scrolling, and responsive design enhance the user experience.</li>
+    </ol>
+
+    <h2>Conclusion</h2>
+    <p>This portfolio website serves as an excellent example of how modern web features can be implemented without relying on external libraries and frameworks. By focusing on vanilla HTML, CSS, and JavaScript, the developer has created a fast, accessible, and maintainable website that showcases their skills effectively.</p>
+    <p>Whether you're a seasoned developer or just starting out, there's value in understanding how to build features from scratch rather than always reaching for pre-built solutions. This approach not only improves your understanding of web fundamentals but can also result in more efficient, customized implementations tailored to your specific needs.</p>
+    <p>The fact that this website was created with the assistance of Cline, an AI coding agent, also points to an exciting future where AI tools can help developers implement best practices and create high-quality web experiences more efficiently.</p>
+</body>
+</html>
